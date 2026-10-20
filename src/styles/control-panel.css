@@ -1,0 +1,36 @@
+.control-panel {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  background: #fff;
+}
+.cp-items {
+  flex: 1;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  align-content: start;
+  gap: 8px;
+  overflow: auto;
+}
+.cp-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px;
+  border: 1px solid transparent;
+}
+.cp-item:focus {
+  --bg: #e8eefa;
+  border-color: #a9bde3;
+}
+.cp-item span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cp-item small {
+  color: #666;
+  font-size: 11px;
+  white-space: normal;
+}

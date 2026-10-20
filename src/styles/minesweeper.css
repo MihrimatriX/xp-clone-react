@@ -1,0 +1,90 @@
+/* Minesweeper keeps its Windows 98 look under Luna, like the real one. */
+.ms {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  background: #c0c0c0;
+  outline: none;
+}
+.ms-board {
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 3px solid;
+  border-color: #fff #808080 #808080 #fff;
+}
+.ms-head {
+  height: 33px;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid;
+  border-color: #808080 #fff #fff #808080;
+}
+.ms-counter {
+  display: flex;
+  padding: 1px;
+  background: #000;
+  border: 1px solid;
+  border-color: #808080 #fff #fff #808080;
+}
+.ms-face {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #808080;
+  --bg: #c0c0c0;
+  --shadow: inset 2px 2px #fff, inset -2px -2px #808080;
+}
+.ms-face:active {
+  --shadow: inset 1px 1px #808080;
+}
+.ms-face:active .ico {
+  transform: translate(1px, 1px);
+}
+.ms-grid {
+  display: grid;
+  border: 3px solid;
+  border-color: #808080 #fff #fff #808080;
+}
+.ms-cell {
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  background: #c0c0c0 center / 12px no-repeat;
+  box-shadow:
+    inset 2px 2px #fff,
+    inset -2px -2px #808080;
+  font:
+    bold 13px/1 Tahoma,
+    Verdana,
+    sans-serif;
+}
+.ms-cell.open,
+.ms-cell.down,
+.ms-cell.mine,
+.ms-cell.wrong {
+  box-shadow: none;
+  border-left: 1px solid #808080;
+  border-top: 1px solid #808080;
+}
+.ms-cell.flag {
+  background-image: url("../assets/icons/flag.svg");
+}
+.ms-cell.mine {
+  background-image: url("../assets/icons/mine.svg");
+}
+.ms-cell.hit {
+  background-color: #ff0000;
+}
+.ms-cell.wrong {
+  background-image: url("../assets/icons/mine-x.svg");
+}
+.ms-cell.q::after {
+  content: "?";
+}

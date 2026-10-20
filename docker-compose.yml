@@ -1,0 +1,18 @@
+services:
+  xp-desktop:
+    build: .
+    image: xp-desktop
+    container_name: xp-desktop
+    restart: unless-stopped
+    environment:
+      SITE_URL: https://xp.example.com # public address; canonical and Open Graph links are built from it
+    ports:
+      - "3000:3000" # Nginx Proxy Manager → http://<host>:3000
+    # Behind Nginx Proxy Manager on the same Docker network, drop `ports` and use the
+    # block below; in NPM, forward to http://xp-desktop:3000.
+    # networks: [npm]
+
+# networks:
+#   npm:
+#     external: true
+#     name: <your NPM network, e.g. nginx-proxy-manager_default>

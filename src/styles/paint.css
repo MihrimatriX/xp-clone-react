@@ -1,0 +1,138 @@
+.paint {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ece9d8;
+  outline: none;
+}
+/* sunken 3D edge */
+.paint-options,
+.paint-area,
+.paint-current,
+.paint-current i,
+.paint-palette i {
+  border: 1px solid;
+  border-color: #808080 #fff #fff #808080;
+}
+.paint-main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+.paint-tools {
+  width: 56px;
+  flex: none;
+  padding: 4px 3px;
+  display: grid;
+  grid-template-columns: 25px 25px;
+  grid-auto-rows: 25px;
+  gap: 1px;
+  align-content: start;
+}
+.paint-tools button {
+  display: grid;
+  place-items: center;
+  --shadow: inset 1px 1px #fff, inset -1px -1px #808080;
+}
+.paint-tools > button.on {
+  --bg: repeating-conic-gradient(#fff 0 25%, #ece9d8 0 50%) 0 0 / 2px 2px;
+  --shadow: inset 1px 1px #808080, inset -1px -1px #fff;
+}
+.paint-options {
+  grid-column: span 2;
+  height: 66px;
+  margin-top: 4px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.paint-options button {
+  width: 38px;
+  height: 12px;
+  --shadow: none;
+}
+.paint-options button.on {
+  --bg: #316ac5;
+}
+.paint-options button i {
+  display: block;
+  background: #000;
+}
+.paint-options button.on i {
+  background: #fff;
+}
+/* !important: beats .paint-options button i, which paints the size samples */
+.fill-mode {
+  width: 26px;
+  height: 9px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  background: #808080 !important;
+}
+.fill-mode.m0 {
+  background: none !important;
+}
+.fill-mode.m2 {
+  border: 0;
+}
+.paint-area {
+  flex: 1;
+  min-width: 0;
+  padding: 3px;
+  overflow: auto;
+  background: #808080;
+}
+.paint-sheet {
+  position: relative;
+  box-shadow: 1px 1px 0 #404040;
+}
+.paint-sheet canvas {
+  position: absolute;
+  inset: 0;
+  image-rendering: pixelated;
+}
+.paint-overlay {
+  pointer-events: none;
+}
+.paint-colors {
+  flex: none;
+  height: 38px;
+  padding: 3px 4px;
+  display: flex;
+  gap: 4px;
+}
+.paint-current {
+  position: relative;
+  width: 31px;
+  height: 31px;
+  background: repeating-conic-gradient(#fff 0 25%, #ece9d8 0 50%) 0 0 / 2px 2px;
+}
+.paint-current i {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+}
+.paint-current i:first-child {
+  right: 4px;
+  bottom: 4px;
+}
+.paint-current i:last-child {
+  left: 4px;
+  top: 4px;
+}
+.paint-palette {
+  display: grid;
+  grid-template-columns: repeat(14, 15px);
+  grid-template-rows: 15px 15px;
+  gap: 1px;
+}
+.paint-palette i {
+  box-shadow: inset 1px 1px #404040;
+}
+.paint .status-bar-field:last-child {
+  flex: none;
+  width: 110px;
+}

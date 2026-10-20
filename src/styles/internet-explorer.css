@@ -1,0 +1,284 @@
+/* Internet Explorer 7 on XP: pale blue chrome, round Back/Forward, tabs under the address bar. */
+.ie {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.ie-bar {
+  flex: none;
+  height: 38px;
+  padding: 0 6px 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(#f6f9fd, #dae5f4);
+  border-bottom: 1px solid #a7bcdc;
+}
+.ie-back,
+.ie-fwd {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.ie-back:not(:disabled):hover,
+.ie-fwd:not(:disabled):hover {
+  filter: brightness(1.12) drop-shadow(0 0 2px #7fb6ff);
+}
+.ie-field {
+  height: 22px;
+  padding: 0 2px 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: #fff;
+  border: 1px solid #8ba3c6;
+  border-radius: 2px;
+}
+.ie-field input {
+  all: unset;
+  flex: 1;
+  min-width: 0;
+  font:
+    12px Tahoma,
+    sans-serif;
+  color: #000;
+  user-select: text;
+}
+.ie-field button {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 18px;
+  border-radius: 2px;
+}
+.ie-address {
+  flex: 1;
+  min-width: 120px;
+}
+.ie-search {
+  width: 200px;
+}
+.ie-search input::placeholder {
+  color: #8a8a8a;
+  font-style: italic;
+}
+.ie-tabbar {
+  flex: none;
+  height: 30px;
+  padding: 0 6px;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  background: linear-gradient(#dae5f4, #c6d7ef);
+  border-bottom: 1px solid #89a5cf;
+}
+.ie-tabbar > button {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+}
+.ie-tabs {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+.ie-tab {
+  flex: 0 1 190px;
+  min-width: 70px;
+  height: 24px;
+  padding: 0 4px 0 7px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #8ba6cf;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(#f2f6fb, #d3e0f1);
+  color: #222;
+}
+.ie-tab span {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ie-tab.on {
+  height: 26px;
+  margin-bottom: -1px;
+  background: linear-gradient(#fff, #f6f9fd);
+}
+.ie-tab button {
+  width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  color: #555;
+  border-radius: 2px;
+}
+.ie-tab button:hover {
+  --bg: #d8261b;
+  color: #fff;
+}
+.ie-tab .ico-refresh {
+  animation: spin 1s linear infinite;
+}
+.ie-newtab {
+  flex: 0 0 30px;
+  min-width: 30px;
+  height: 20px;
+  --bg: linear-gradient(#eef3fa, #d3e0f1);
+  border: 1px solid #a3b9da;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+}
+.ie-commands {
+  align-self: center;
+  display: flex;
+  gap: 2px;
+}
+.ie-commands button {
+  height: 24px;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 3px;
+  color: #1e395b;
+}
+.ie-view {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+.ie-page {
+  position: absolute;
+  inset: 0;
+}
+.ie-page iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  background: #fff;
+}
+.ie .status-bar-field {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.ie .status-bar-field:not(:first-child) {
+  flex: none;
+  width: 90px;
+}
+
+.ie-doc {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 22px 34px;
+  overflow: auto;
+  font:
+    13px/1.45 Tahoma,
+    "Segoe UI",
+    sans-serif;
+  color: #222;
+  user-select: text;
+}
+.ie-doc h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  font-size: 19px;
+  font-weight: normal;
+  color: #1f3c87;
+}
+.ie-doc h2 {
+  margin: 18px 0 6px;
+  font-size: 13px;
+}
+.ie-doc ul {
+  margin: 0;
+  padding-left: 22px;
+}
+.ie-home header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border-radius: 6px;
+  color: #fff;
+  background: linear-gradient(100deg, #0b3fa0, #2f7be3 55%, #8cc4ff);
+}
+.ie-home header h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 22px;
+}
+.ie-home header p {
+  margin: 2px 0 0;
+  opacity: 0.9;
+}
+.ie-home form {
+  display: flex;
+  gap: 6px;
+  margin: 18px 0 6px;
+}
+.ie-home form input {
+  flex: 1;
+  height: 24px;
+}
+.ie-home ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 6px;
+}
+.ie-home li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border: 1px solid #dbe5f3;
+  border-radius: 4px;
+  background: #f6f9fd;
+}
+.ie-home a {
+  color: #0033cc;
+}
+.ie-note {
+  margin-top: 18px;
+  color: #666;
+  font-size: 11px;
+}
+.ie-error h1 {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #c8c8c8;
+  color: #4e4e4e;
+}
+.ie-try {
+  list-style: "› ";
+}
+.ie-try button {
+  color: #0033cc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.ie-tips li {
+  margin-bottom: 6px;
+}
+.ie-field button:hover,
+.ie-tabbar > button:hover,
+.ie-commands button:hover {
+  --bg: rgb(255 255 255 / 0.65);
+  --shadow: inset 0 0 0 1px #8fb0de;
+}

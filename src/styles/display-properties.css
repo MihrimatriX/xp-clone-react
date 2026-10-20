@@ -1,0 +1,152 @@
+.display-props {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8px 0;
+  background: #ece9d8;
+}
+.display-props [role="tabpanel"] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 14px 12px 12px;
+}
+/* The little CRT the preview sits in. */
+.monitor {
+  position: relative;
+  align-self: center;
+  width: 182px;
+  padding: 12px 13px 20px;
+  box-sizing: border-box;
+  border-radius: 9px;
+  background: linear-gradient(#f5f3ec, #d4cfbd);
+  box-shadow:
+    inset -2px -2px #a39e8b,
+    inset 2px 2px #fff,
+    1px 2px 3px rgb(0 0 0 / 0.3);
+}
+.monitor::before {
+  content: "";
+  position: absolute;
+  right: 14px;
+  bottom: 7px;
+  width: 6px;
+  height: 3px;
+  border-radius: 2px;
+  background: #4ac24a;
+}
+.monitor::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -13px;
+  width: 74px;
+  height: 12px;
+  transform: translateX(-50%);
+  border-radius: 0 0 8px 8px;
+  background: linear-gradient(#e2ddcd, #b5af9b);
+  box-shadow: 0 2px 2px rgb(0 0 0 / 0.2);
+}
+.monitor-screen {
+  width: 154px;
+  height: 116px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid;
+  border-color: #7a7666 #fff #fff #7a7666;
+}
+.mini-saver {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.mini-saver.starfield {
+  background:
+    radial-gradient(1px 1px at 20% 30%, #fff 99%, transparent),
+    radial-gradient(1px 1px at 70% 20%, #fff 99%, transparent),
+    radial-gradient(1.5px 1.5px at 45% 65%, #fff 99%, transparent),
+    radial-gradient(1px 1px at 85% 75%, #ddd 99%, transparent),
+    radial-gradient(1px 1px at 10% 80%, #bbb 99%, transparent),
+    radial-gradient(2px 2px at 60% 45%, #fff 99%, transparent), #000;
+}
+.mini-saver.marquee span {
+  position: absolute;
+  top: 45%;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 11px;
+  animation: mini-marquee 4s linear infinite;
+}
+@keyframes mini-marquee {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -60%;
+  }
+}
+.dp-desktop > label {
+  display: block;
+  margin-bottom: 4px;
+}
+.dp-row {
+  display: flex;
+  gap: 10px;
+}
+.dp-list {
+  flex: 1;
+  height: 112px;
+  margin: 0;
+  padding: 1px;
+  list-style: none;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #7f9db9;
+  outline: none;
+}
+.dp-list li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 3px;
+  white-space: nowrap;
+}
+.dp-list li.selected {
+  background: var(--select);
+  color: #fff;
+}
+.dp-side {
+  width: 92px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dp-side button {
+  min-width: 0;
+  margin-bottom: 8px;
+}
+.dp-side input[type="color"] {
+  width: 60px;
+  height: 22px;
+  padding: 0 2px;
+}
+.dp-saver .field-row {
+  gap: 6px;
+  margin-top: 6px;
+}
+.dp-saver select {
+  flex: 1;
+}
+.dp-saver button {
+  min-width: 0;
+  padding: 0 10px;
+}
+.dp-saver input[type="number"] {
+  width: 48px;
+}
+.dp-buttons {
+  justify-content: flex-end;
+  padding: 8px 0 10px;
+}

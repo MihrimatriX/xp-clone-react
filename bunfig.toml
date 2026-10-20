@@ -1,0 +1,5 @@
+[serve.static]
+plugins = ["./xp-css-fix.ts"]
+
+[test]
+preload = ["./src/test-setup.ts"]

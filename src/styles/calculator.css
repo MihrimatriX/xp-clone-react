@@ -1,0 +1,61 @@
+.calc {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  background: #ece9d8;
+  outline: none;
+}
+.calc-body {
+  padding: 8px 9px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.calc-display {
+  height: 22px;
+  padding: 2px 5px;
+  text-align: right;
+  font:
+    13px Tahoma,
+    sans-serif;
+  background: #fff;
+}
+.calc-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.calc-mem {
+  width: 32px;
+  height: 26px;
+  margin-right: 12px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  border: 1px solid;
+  border-color: #808080 #fff #fff #808080;
+}
+.calc-top button {
+  flex: 1;
+}
+.calc-grid {
+  display: grid;
+  grid-template-columns: 38px repeat(5, 36px);
+  gap: 6px;
+} /* wider first track: XP sets memory keys apart */
+.calc-grid button:nth-child(6n + 1) {
+  width: 32px;
+}
+.calc button {
+  min-width: 0;
+  min-height: 0;
+  height: 29px;
+  padding: 0;
+  font:
+    11px Tahoma,
+    sans-serif;
+  color: #0000ff;
+}
+.calc button.red {
+  color: #f00;
+}

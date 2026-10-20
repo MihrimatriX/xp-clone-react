@@ -1,0 +1,9 @@
+node_modules
+dist
+docs
+.claude
+*.log
+Dockerfile
+docker-compose.yml
+src/**/*.test.ts
+src/test-setup.ts

@@ -1,0 +1,28 @@
+.notepad {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.notepad textarea {
+  flex: 1;
+  min-height: 0;
+  margin: 0;
+  padding: 2px 4px;
+  resize: none;
+  border: 1px solid #7f9db9;
+  border-radius: 0;
+  box-shadow: none;
+  font:
+    13px/1.25 "Lucida Console",
+    Consolas,
+    monospace;
+  color: #000;
+  outline: none;
+  user-select: text;
+}
+.notepad .status-bar-field:last-child {
+  flex: none;
+  width: 140px;
+}
